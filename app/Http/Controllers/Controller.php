@@ -4,5 +4,5 @@ namespace App\Http\Controllers;
 
 abstract class Controller
 {
-    //teste
+    //teste 1, 2, 3
 }
