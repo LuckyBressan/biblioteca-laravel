@@ -12,4 +12,8 @@ class Cliente extends Model
         'data_nascimento',
         'sexo'
     ];
+
+    public function processos() {
+        return $this->hasMany(Processo::class);
+    }
 }

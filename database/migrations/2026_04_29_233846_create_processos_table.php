@@ -15,9 +15,14 @@ return new class extends Migration {
             $table->id();
             $table->string('observacao')->nullable(true);
             $table
-                ->enum('status', [ProcessoStatus::ABERTO, ProcessoStatus::FECHADO])
+                ->enum('status', array_column(ProcessoStatus::cases(), 'value'))
                 ->nullable(false)
                 ->default(ProcessoStatus::ABERTO);
+            $table->date('data_retirada')->nullable(false);
+            $table->date('data_prevista')->nullable(false);
+            $table->date('data_devolucao')->nullable(true);
+            /** @todo Aguardando desenvolvimento da tabela livro */
+            // $table->foreignId('livro_id')->constrained('livro');
             $table->foreignId('cliente_id')->constrained('cliente');
             $table->timestamps();
         });

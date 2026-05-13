@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('processos/{cliente}', [ProcessoController::class, 'index'])->name('processos.index'); //Acessar a view de listagem
 
-Route::get('processos/editar/{cliente}', [ProcessoController::class, 'show'])->name('processos.show'); //Acessar a view de edição de informações
+Route::get('processos/editar/{cliente}', [ProcessoController::class, 'edit'])->name('processos.edit'); //Acessar a view de edição de informações
 Route::patch('processos/editar', [ProcessoController::class, 'update'])->name('processos.update'); //Fazer o update de informações
 
 //Incluir
