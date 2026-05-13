@@ -1,9 +1,4 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-require __DIR__ . 'processos.php';
-
-Route::get('/', function () {
-    return view('welcome');
-});
+require_once __DIR__ . '/processos.php';
+require_once __DIR__ . '/clientes.php';
