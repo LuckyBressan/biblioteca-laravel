@@ -15,7 +15,7 @@
 
     @if ($errors->any)
         @foreach ($errors->all() as $err)
-            <div>
+            <div style="color: red;">
                 {{ $err }}
             </div>
         @endforeach
@@ -34,7 +34,7 @@
         </div>
         <div>
             <label for="data_prevista">Data Prevista</label>
-            <input type="date" name="data_prevista" id="data_prevista">
+            <input type="date" name="data_prevista" id="data_prevista" value="{{ Date::now()->addDays(30)->toDateString() }}">
         </div>
         <div>
             <label for="status">Status</label>
